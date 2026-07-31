@@ -14,8 +14,22 @@
     "./vocabulary/rules": "./vocabulary/preference-rules.js",
     "./vocabulary/profiles": "./vocabulary/profiles.js"
   },
-  "repository": { "type": "git", "url": "git+https://github.com/bobdodd/user-profiles.git" },
-  "dependencies": { "action-language": "github:bobdodd/action-language" },
-  "scripts": { "test": "node test/user.test.mjs && node test/preference.test.mjs" },
-  "files": ["model", "vocabulary", "README.md", "LICENSE"]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobdodd/user-profiles.git"
+  },
+  "dependencies": {
+    "action-language": "github:bobdodd/action-language"
+  },
+  "scripts": {
+    "test": "node test/user.test.mjs && node test/preference.test.mjs",
+    "docs:profiles": "node docs/tools/render-profiles.mjs > docs/user-profiles.md",
+    "docs:profiles-docx": "python3 docs/tools/make-profiles-docx.py"
+  },
+  "files": [
+    "model",
+    "vocabulary",
+    "README.md",
+    "LICENSE"
+  ]
 }
