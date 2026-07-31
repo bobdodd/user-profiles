@@ -1,0 +1,21 @@
+{
+  "name": "user-profiles",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Service domain for describing people to computers: capability and preference models.",
+  "license": "GPL-3.0-or-later",
+  "exports": {
+    "./capability": "./model/capability.js",
+    "./capacity": "./model/capacity.js",
+    "./group": "./model/group.js",
+    "./preference": "./model/preference.js",
+    "./vocabulary/capability": "./vocabulary/user-capability.js",
+    "./vocabulary/preference": "./vocabulary/user-preference.js",
+    "./vocabulary/rules": "./vocabulary/preference-rules.js",
+    "./vocabulary/profiles": "./vocabulary/profiles.js"
+  },
+  "repository": { "type": "git", "url": "git+https://github.com/bobdodd/user-profiles.git" },
+  "dependencies": { "action-language": "github:bobdodd/action-language" },
+  "scripts": { "test": "node test/user.test.mjs && node test/preference.test.mjs" },
+  "files": ["model", "vocabulary", "README.md", "LICENSE"]
+}
